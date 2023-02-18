@@ -7,7 +7,7 @@ export const MarvelPage = () => {
             <h1>Marvel Comics</h1>
             <hr />
 
-            <HeroList publiser='Marvel Comics' />
+            <HeroList publisher='Marvel Comics' />
         </>
     )
 }
