@@ -11,25 +11,27 @@ export const AppRouter = () => {
             <Routes>
 
                 <Route path="login/*" element={
-                    {/* <LoginPage /> */ }
 
                     < PublicRoute >
-                    <Route path="/*" element={<LoginPage />} />
+                        {/* <LoginPage /> */}
+                        <Routes>
+                            <Route path="/*" element={<LoginPage />} />
+                        </Routes>
                     </PublicRoute>
                 }
 
                 />
 
-            <Route path="/*" element={
-                <PrivateRoute>
-                    <HeoresRoutes />
-                </PrivateRoute>
-            } />
+                <Route path="/*" element={
+                    <PrivateRoute>
+                        <HeoresRoutes />
+                    </PrivateRoute>
+                } />
 
-            {/* <Route path="login" element={<LoginPage />} /> */}
+                {/* <Route path="login" element={<LoginPage />} /> */}
 
 
-        </Routes>
+            </Routes>
         </>
     )
 }
